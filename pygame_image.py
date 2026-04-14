@@ -25,7 +25,7 @@ def main():
             if event.type == pg.QUIT: return
         x=tmr%3200
         key_list = pg.key.get_pressed()
-        kk_rct.move_ip(-1,0)#応用課題１
+        #kk_rct.move_ip(-1,0)#応用課題１
 
 
         #if key_list[pg.K_UP]:#上矢印キー
@@ -39,7 +39,7 @@ def main():
 
         #応用課題２
         jyouge=0
-        sayuu=0
+        sayuu=-1
         if key_list[pg.K_UP]:
             jyouge-=1
         if key_list[pg.K_DOWN]:
