@@ -28,16 +28,28 @@ def main():
         kk_rct.move_ip(-1,0)#応用課題１
 
 
-        if key_list[pg.K_UP]:#上矢印キー
-            kk_rct.move_ip(0,-1)
-        elif key_list[pg.K_DOWN]:#下矢印
-            kk_rct.move_ip(0,+1)
-        elif key_list[pg.K_LEFT]:#左矢印キー
-            kk_rct.move_ip(-1,0)
-        elif key_list[pg.K_RIGHT]:#右矢印
-            kk_rct.move_ip(+2,0)
+        #if key_list[pg.K_UP]:#上矢印キー
+        #    kk_rct.move_ip(0,-1)
+        #elif key_list[pg.K_DOWN]:#下矢印
+        #    kk_rct.move_ip(0,+1)
+        #elif key_list[pg.K_LEFT]:#左矢印キー
+        #    kk_rct.move_ip(-1,0)
+        #elif key_list[pg.K_RIGHT]:#右矢印
+        #    kk_rct.move_ip(+2,0)
 
-        
+        #応用課題２
+        jyouge=0
+        sayuu=0
+        if key_list[pg.K_UP]:
+            jyouge-=1
+        if key_list[pg.K_DOWN]:
+            jyouge+=1
+        if key_list[pg.K_LEFT]:
+            sayuu-=1
+        if key_list[pg.K_RIGHT]:
+            sayuu+=2
+        kk_rct.move_ip(sayuu,jyouge)
+
 
         
         #screen.blit(bg_img, [0, 0])#練習２
