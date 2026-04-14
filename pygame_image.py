@@ -23,18 +23,23 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
+        x=tmr%3200
         key_list = pg.key.get_pressed()
+        kk_rct.move_ip(-1,0)#応用課題１
+
+
         if key_list[pg.K_UP]:#上矢印キー
             kk_rct.move_ip(0,-1)
-        if key_list[pg.K_DOWN]:#下矢印
+        elif key_list[pg.K_DOWN]:#下矢印
             kk_rct.move_ip(0,+1)
-        if key_list[pg.K_LEFT]:#左矢印キー
+        elif key_list[pg.K_LEFT]:#左矢印キー
             kk_rct.move_ip(-1,0)
-        if key_list[pg.K_RIGHT]:#右矢印
-            kk_rct.move_ip(+1,0)
+        elif key_list[pg.K_RIGHT]:#右矢印
+            kk_rct.move_ip(+2,0)
 
-        x=tmr%3200
+        
+
+        
         #screen.blit(bg_img, [0, 0])#練習２
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x+1600, 0])
